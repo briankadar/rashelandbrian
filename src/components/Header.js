@@ -46,6 +46,7 @@ class Header extends Component {
     const img = await loadImage(this._imgSrc);
     const { width, height } = img;
     this.setState({
+      logoLoaded: true,
       logoSize: { width, height }
     }, this.recalculateSize);
   }
@@ -121,6 +122,7 @@ class Header extends Component {
         <div style={headerStyle} className={cx({
           Header: true,
           'Header--collapsed': this.state.collapsed,
+          'Header--logoLoaded': this.state.logoLoaded,
         })}>
           <div className="HeaderContent">
             <div className="HeaderContent-left">

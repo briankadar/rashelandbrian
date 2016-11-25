@@ -33,15 +33,20 @@
   }
 }
 
+
 .HeaderContent {
-  display: table;
   table-layout: fixed;
   width: 100%;
   font-size: 18px;
+  display: none;
 
   @media #{$query-mobile} {
     font-size: 14px;
   }
+}
+
+.Header--logoLoaded .HeaderContent {
+  display: table;
 }
 
 .HeaderContent-left {
