@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Lavanderia';
+    src: url('../fonts/lavanderia_regular-webfont.woff2') format('woff2'),
+         url('../fonts/lavanderia_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@mixin font-regular() {
+  font-family: 'Archer SSm A', 'Archer SSm B';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin font-fancy() {
+  font-family: 'Lavanderia';
+  font-weight: normal;
+  font-style: normal;
+}
