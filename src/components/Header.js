@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PureComponent, PropTypes} from 'react';
 
 import Resizer from './Resizer';
 import loadImage from '../utils/loadImage';
@@ -25,7 +25,7 @@ const SCROLL_RANGE = {
 
 const round = (num) => Math.round(num * 2) / 2;
 
-class Header extends Component {
+class Header extends PureComponent {
   static propTypes = {
     onResize: PropTypes.func,
   };
@@ -125,15 +125,19 @@ class Header extends Component {
           'Header--logoLoaded': this.state.logoLoaded,
         })}>
           <div className="HeaderContent">
-            <div className="HeaderContent-left">
+            <div className="HeaderContent-side HeaderContent-side--left">
+              <span className="HeaderContent-side-content">
                 Sept 4, 2017
+              </span>
             </div>
             <div className="HeaderContent-middle" 
               style={{width: this.state.logoWidth}}>
               {this.renderLogo()}
             </div>
-            <div className="HeaderContent-right">
+            <div className="HeaderContent-side HeaderContent-side--right">
+              <span className="HeaderContent-side-content">
                 5777, 13 אלול
+              </span>
             </div>
           </div>
         </div>
