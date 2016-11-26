@@ -10,12 +10,12 @@ import '../styles/components/Header.scss';
 
 const HEADER_HEIGHT_RANGE = {
   default: [250, 80],
-  mobile: [180, 80],
+  mobile: [150, 80],
 };
 
 const HEADER_PADDING_RANGE = {
-  default: [40, 18],
-  mobile: [40, 18],
+  default: [65, 18],
+  mobile: [35, 18],
 };
 
 const SCROLL_RANGE = {
